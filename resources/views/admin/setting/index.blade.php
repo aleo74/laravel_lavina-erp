@@ -4,7 +4,7 @@
 
 	@include('includes.message')
 
-	<h1>User</h1>
+	<h1>Settings</h1>
 	<div class="container">
 	<table class="table table-bordered table-striped">
 		<thead>

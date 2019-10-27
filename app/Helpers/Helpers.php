@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\DB;
 
+
 class Helpers {
 
     static function setting($key, $default = null)
