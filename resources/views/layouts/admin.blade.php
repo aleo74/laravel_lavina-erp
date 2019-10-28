@@ -23,7 +23,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="" class="site_title"><i class="fa fa-paw"></i> <span>{{Helpers::setting('site.title')}} </span></a>
+                    <a href="{{url('/')}}" class="site_title"><i class="fa fa-paw"></i> <span>{{Helpers::setting('site.title')}} </span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -57,7 +57,7 @@
                             <li><a><i class="fa fa-cogs"></i> Settings <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('admin.settings.index')}}">Settings</a></li>
-                                    <!--<li><a href="{{route('admin.settings.create')}}">Create User</a></li>-->
+                                    <li><a href="{{route('admin.settings.create')}}">Create Setting</a></li>
                                 </ul>
                             </li>
                         </ul>

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Lavina ERP') }}</title>
+    <title>{{Helpers::setting('site.title')}}</title>
 
     <!-- Styles -->
     <link href="{{ url('css/app.css') }}" rel="stylesheet">
@@ -37,7 +37,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" style="color: #3097D1;" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{Helpers::setting('site.title')}}
                     </a>
                 </div>
 

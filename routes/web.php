@@ -26,6 +26,7 @@ Route::group(['middleware'=>'admin', 'as' => 'admin.'], function(){
 	Route::resource('/admin/users', 'AdminUsersController');
 	//Route::get('admin/media/upload',['as'=>'admin.media.upload', 'uses'=>'AdminMediasController@store']);
     Route::resource('/admin/settings', 'SettingsController');
+    //Route::post('/admin/settings/create', 'SettingsController@store');
 
 });
 

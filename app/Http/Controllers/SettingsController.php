@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Setting;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class SettingsController extends Controller
@@ -25,7 +26,7 @@ class SettingsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.setting.create');
     }
 
     /**
@@ -36,7 +37,11 @@ class SettingsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Setting::create($request->except('_token'));
+
+        Session::flash('created_message', 'The setting has been created');
+
+        return redirect('/admin/settings');
     }
 
     /**

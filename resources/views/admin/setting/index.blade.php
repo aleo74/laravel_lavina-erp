@@ -38,6 +38,10 @@
 		@endif
 		</tbody>
 	</table>
+        <div class="alert alert-info">
+            <strong>How to use :</strong>
+            <p>You can obtaint the value of any setting everywhere on the ERP, with <code>Helpers::setting('site.title')</code></p>
+        </div>
 	</div>
 @stop
 

@@ -25,7 +25,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="{{url('/')}}" class="site_title"><i class="fa fa-briefcase"></i> <span>Lavina ERP</span></a>
+                    <a href="{{url('/')}}" class="site_title"><i class="fa fa-briefcase"></i> <span>{{Helpers::setting('site.title')}}</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -58,7 +58,7 @@
                                 </ul>
                             </li>
                             @endif
-                            
+
 							@if(Auth::user()->isBowner())
                             <li><a><i class="fa fa-hourglass-1"></i> Production <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
@@ -77,8 +77,8 @@
                                 <ul class="nav child_menu">
                                     <li><a href="{{ route('bowner.chart.index') }}">All Charts</a></li>
                                 </ul>
-                            </li>       
-							
+                            </li>
+
 							<li><a><i class="fa fa-users"></i> Human Resource <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{ route('bowner.humans.index') }}">All Employees</a></li>
@@ -86,7 +86,7 @@
                                     <li><a href="{{ route('bowner.salaries.index') }}">Salary</a></li>
                                     <li><a href="{{ route('bowner.leaves.index') }}">Leave</a></li>
                                 </ul>
-                            </li>               
+                            </li>
 
 							<li><a><i class="fa fa-phone-square"></i> Customer <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
@@ -94,14 +94,14 @@
                                     <li><a href="{{ route('bowner.customer.create') }}">Create Customer</a></li>
                                 </ul>
                             </li>
-							
+
 							<li><a><i class="fa fa-truck"></i> Supplier <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{ route('bowner.supplier.index') }}">All Suppliers</a></li>
                                     <li><a href="{{ route('bowner.supplier.create') }}">Add Suppliers</a></li>
                                 </ul>
-                            </li>		
-                            @endif	
+                            </li>
+                            @endif
 
                             @if (Auth::user()->isManager())
                             <li><a><i class="fa fa-hourglass-1"></i> Production <span class="fa fa-chevron-down"></span></a>
@@ -122,8 +122,8 @@
                                     <li><a href="{{ route('bowner.supplier.index') }}">All Suppliers</a></li>
                                     <li><a href="{{ route('bowner.supplier.create') }}">Add Suppliers</a></li>
                                 </ul>
-                            </li>       
-                            @endif  
+                            </li>
+                            @endif
                         </ul>
                     </div>
 
@@ -213,12 +213,12 @@
             <div class="content">
                 @yield('content')
             </div>
-            
+
             <div class="bg-footer">
             </div>
         </div>
         <!-- /page content -->
-        
+
         <!-- footer content -->
         <footer>
             <!--
